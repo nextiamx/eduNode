@@ -6,9 +6,9 @@ A revolutionary holistic-education platform
 
 ***Dependencies***
 
-* (MongoDB)["http://mongodb.org"]
-* (NodeJS)["http://nodejs.org"]
-* (Redis)["http://redis.org"]
+* [MongoDB]("http://mongodb.org")
+* [NodeJS]("http://nodejs.org")
+* [Redis]("http://redis.org")
 
 ***Install***
 
