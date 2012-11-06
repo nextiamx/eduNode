@@ -1,0 +1,12 @@
+{
+  "name": "EduNode",
+  "description": "Node for Education",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "express": "3.x",
+    "mootools": "1.4.5",
+    "socket.io" :"*",
+    "mongojs" : "*"
+  }
+}
