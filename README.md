@@ -12,7 +12,8 @@ A revolutionary holistic-education platform
 
 ***Install***
 
-* $ git clone --recursive https://github.com/inzurrekt/eduNode.git eduNode
+* $ git clone --recursive 
+* $ git remote add origin https://github.com/nextiamx/eduNode.git eduNode
 * $ cd ./eduNode
 * $ npm install
 * $ node main.js
