@@ -1,13 +1,25 @@
 var mongojs = require("mongojs");
 
 var data = {
-  /*
+ 
   'Imprenta' : require("../data/Imprenta"),
   
-  'User'     : require("../data/User"),
-  'Group'    : require("../data/Group"),
-  'Theme'    : require("../data/Theme"),
-  'Topic'    : require("../data/Theme"),
+  'User'       : require("../data/User"),         /*   email, password
+  'Group'      : require("../data/Group"),          usuarios, nombre, descripcion... etc
+ 
+  // Ser o no Academicos » Escuela » LugarFisico (catedratico, moderador)  --> curricula --> carrera
+---> Eventos  (se realizan discusiones) --^ 
+
+ (Mensajes)
+
+  'Discussion' : requoer("../data/Discussion"),    
+  'Comment'    :   << Attachado (Video, PDF, link a web, archivo)
+  'Subjects'   :  (Arbol) 
+  'SubjectsRelations' Magia
+
+
+  'Activities' : Pendiente !
+  'Project'    : pendiente !
 */
 
 }
