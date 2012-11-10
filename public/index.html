@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+
+    </title>
+    <link rel="stylesheet/less" type="text/less" href="bootstrap/less/bootstrap.less"/>
+    <link rel="stylesheet/less" type="text/less" href="less/mainstyle.less"/>
+    <script type="text/javascript" src="js/require.js"></script>
+
+    <script >
+require.config({
+baseUrl: "./js/",
+//paths: {
+//  "some": "some/v1.0"
+//},
+waitSeconds: 15
+});
+    </script>
+    <script type="text/javascript" src="js/wakeUp.js"></script>
+    <script type="text/javascript" src="js/less.js"></script>
+
+</head>
+
+<body>
+
+  <!-- nav bar -->
+
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="#">Title</a>
+      <ul class="nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- end of nav bar -->
+  <a class="btn btn-primary"><i class="icon-bookmark-empty"></i>Hello</a>
+
+  <div class="icon-bookmark-empty" style="font-size:3em"></div>
+
+</body>
+</html>
