@@ -2,7 +2,10 @@ var actions = {};
 
 actions.Startup = function(params, callback) {
 	callback( {
-		'logged' : false
+		'logged' : true,
+		'actions' : [
+			{a:1, b:2}
+		]
 	});
 };
 
