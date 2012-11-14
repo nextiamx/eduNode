@@ -4,8 +4,13 @@ actions.Startup = function(params, callback) {
 	callback( {
 		'logged' : true,
 		'actions' : [
-			{a:1, b:2}
+			{action:"home",    caption: "Inicio",    icon : 'icon-home',},
+			{action:"comunidades",    caption: "Comunidades",    icon : 'icon-group'},
+			{action:"cursos",    caption: "Cursos",    icon : 'icon-book'},
+			{action:"universidades", caption: "Universidades", icon : 'icon-bell'},
+			{action:"proyectos", caption: "Proyectos", icon : 'icon-tasks'}
 		]
+
 	});
 };
 

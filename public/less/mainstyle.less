@@ -1,6 +1,6 @@
 @FondoGeneral :  #DDD;
 
-body {
+body#EduNode {
 	background-color: @FondoGeneral;
 	.container-fluid {
 		.row-fluid{
@@ -19,4 +19,35 @@ body {
 		}
 		
 	}
+}
+
+.mainContainer {
+	position:absolute;
+	left:0px;
+	right:0px;
+	padding:0px;
+	overflow:hidden;
+	top:50px;
+	bottom:0px;
+}
+
+.sideMenu {
+	width:120px;
+	position:absolute;
+	top:4px;
+	bottom:0px;
+	left:0px;
+}
+
+.mainView {
+	position:absolute;
+	background:#EFEFEF;
+	left:120px;
+	top:4px;
+	right:-10px;
+	bottom:-10px;
+	padding:10px 20px 20px 10px;
+	border-radius:8px;
+	border:1px solid #EEE;
+	box-shadow: -2px -2px 2px #BBB;
 }

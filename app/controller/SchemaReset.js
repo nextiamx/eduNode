@@ -1,7 +1,7 @@
 var mongojs = require("mongojs");
 
 var data = {
- 
+ /*
   'Imprenta' : require("../data/Imprenta"),
   
   'User'       : require("../data/User"),         /*   email, password
@@ -21,6 +21,19 @@ var data = {
   'Activities' : Pendiente !
   'Project'    : pendiente !
 */
+
+  'Universities' : require("../data/universities"),
+ // -> Carreras -> Curriculums (cursos)
+/*
+  'Users'        : require("../data/users"),
+  'Communities'  : require("../data/communities"),
+  'Courses'      : require("../data/courses"),
+  'Discussions'  : require("../data/discussions"),
+  'Comments'     : require("../data/comments"),
+  'Activities'   : require("../data/activities"),
+  'Events'       : require("../data/events"),
+  'Projects'     : require("../data/projects"),*/
+  'Subjects'     : require("../data/subjects") 
 
 }
 
