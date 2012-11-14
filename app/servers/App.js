@@ -8,7 +8,8 @@ actions.Startup = function(params, callback) {
 			{action:"comunidades",    caption: "Comunidades",    icon : 'icon-group'},
 			{action:"cursos",    caption: "Cursos",    icon : 'icon-book'},
 			{action:"universidades", caption: "Universidades", icon : 'icon-bell'},
-			{action:"proyectos", caption: "Proyectos", icon : 'icon-tasks'}
+			{action:"proyectos", caption: "Proyectos", icon : 'icon-tasks'},
+			{action:"info", caption: "Información", icon : 'icon-info-sign'}
 		]
 
 	});

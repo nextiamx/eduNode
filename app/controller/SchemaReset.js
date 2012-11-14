@@ -23,10 +23,13 @@ var data = {
 */
 
   'Universities' : require("../data/universities"),
+
+  'Communities'  : require("../data/communities"),
+ 
  // -> Carreras -> Curriculums (cursos)
 /*
   'Users'        : require("../data/users"),
-  'Communities'  : require("../data/communities"),
+  
   'Courses'      : require("../data/courses"),
   'Discussions'  : require("../data/discussions"),
   'Comments'     : require("../data/comments"),
