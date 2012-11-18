@@ -1,0 +1,10 @@
+<h3>{{App_ActualAction}}</h3>
+<h4>{{App_ActualSubtitle}}</h4>
+<div class="row-fluid">
+  <div class="span8">
+    <ul>
+      <li ng-repeat="U in Universities">{{U.university}}</li>
+    </ul>
+  </div>
+  <div class="span4" ng-include="'partials/subjects/dynamic-list.html'" ng-controller="SubjectsDListCtrl"></div>
+</div>
