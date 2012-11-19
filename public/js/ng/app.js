@@ -1,30 +1,24 @@
-angular.module('edunode', []).
-  config(['$routeProvider', function($routeProvider) {
-    /*El Route provider Asigna los Controladores y plantillas a cada ruta*/
-    $routeProvider.
-      //Home, vista general de todo
-      when('/',{
-        templateUrl : 'partials/home.html',   
-        controller  : HomeCtrl
-      }).
-      //Grupos (Circulos de Estudios)
-      when('/cursos/', {
-        templateUrl : 'partials/courses/index.html',  
-        controller  :  CoursesCtrl
-      }).
-      //Communities
-      when('/comunidades/', {
-        templateUrl : 'partials/communities/index.html',
-        controller  : CommunitiesCtrl
-      }).
-      when('/comunidad/:id', {
-        templateUrl : 'partials/communities/view.html',
-        controller  : SingleCtrl
-      }).
+var EduCom = angular.module('EduCom', []);
+EduCom.config(["$routeProvider", function($routeProvider) {
+  $routeProvider
+    .when("/", {
+      jAction : 1
+    })
+    .otherwise({
+      redirectTo : "/"
+    });
 
-      when('/info/', {
-        templateUrl : 'partials/utils/info.html'
-      }).
+}]);
+EduCom.controller("EduComCtrl", ["$scope", function($scope) {
+  console.log($scope);
+  var render = function() {
+    alert(100);
+  }
 
-      otherwise({redirectTo: '/'});
-  }]).run(RunCtrl); 
+  $scope.$on("$routeChangeSuccess", function($currRoute, $prevRoute) {
+    alert(2);
+  })
+
+
+}]);
+  

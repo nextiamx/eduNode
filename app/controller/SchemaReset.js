@@ -16,7 +16,7 @@ var data = {
   'Project'    : pendiente !
 */
 
-  'Universities' : require("../data/universities"),
+ // 'Universities' : require("../data/universities"),
   'Communities'  : require("../data/communities"),
  // 'Courses'      : require("../data/courses"),
   //'Projects'     : require("../data/projects"),
