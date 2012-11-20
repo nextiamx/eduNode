@@ -1,16 +1,28 @@
 <!DOCTYPE html>
 <html lang="es" ng-app="EduCom" ng-controller="EduComCtrl">
 <head>
-  <title>{{App_Title}}</title>
+  <title> « EduComún » </title>
   <link rel="stylesheet/less" type="text/less" href="bootstrap/less/bootstrap.less"/>
   <link rel="stylesheet/less" type="text/less" href="bootstrap/less/responsive.less"/>
   <link rel="stylesheet/less" type="text/less" href="less/mainstyle.less"/>
 </head>
 <body id="EduNode">
+  <id id="EduCom">
+  </id>
+
   <script type="text/javascript" src="js/less.js"></script>
   <script type="text/javascript" src="js/mootools-core-1.4.5-full-nocompat-yc.js"></script>
   <script type="text/javascript" src="js/mootools-more-1.4.0.1.js"></script>
-  <script type="text/javascript" src="js/jg/juggler.js"></script>
+  <script type="text/javascript" src="js/require.js"></script>
+<script>  
+  require.config({
+    baseUrl: "./js/",
+ //   paths: {
+ //       "some": "some/v1.0"
+ //   },
+    waitSeconds: 15
+  });
+</script>
   <script type="text/javascript" src="js/ec/igniter.js"></script>
 <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
   <script type="text/javascript" src="js/angular.min.js"></script>

@@ -1,22 +1,13 @@
-var EduCom = juggler.app("EduCom", []);
+require(["tree/index", "ec/wakeup"], 
 
-EduCom.configure(function(app) {
-	app.est("@HashWatcher", juggler.HashWatcher);
-	app.est("@Routes");
-});
+	function(TreeJS, EduWakeup) {
+		window.addEvent("domready", function() {
 
-EduCom.use(function(app, next) {
-	app.debug("Require App Config");
-	next();
-});
-
-EduCom.use(function(app, next) {
-	var HashWatcher = app.obt("@HashWatcher");
-
-	HashWatcher().addEvent("change", function(b, a){
-		app.debug(a + " -» " +b);
-	});
-});
+			var e = TreeJS("EduCom", $("EduCom"), EduWakeup);
+			
+		})
+		
+	}
+);
 
 
-EduCom.run($(document.body));
