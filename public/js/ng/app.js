@@ -9,16 +9,5 @@ EduCom.config(["$routeProvider", function($routeProvider) {
     });
 
 }]);
-EduCom.controller("EduComCtrl", ["$scope", function($scope) {
-  console.log($scope);
-  var render = function() {
-    alert(100);
-  }
 
-  $scope.$on("$routeChangeSuccess", function($currRoute, $prevRoute) {
-    alert(2);
-  })
-
-
-}]);
   
