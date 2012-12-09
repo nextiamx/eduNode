@@ -1,16 +1,3 @@
-function RunCtrl($http, $rootScope) {
-    $http.get("$App:Info").success(function(r) {
-      if(r.logged) {
-        $rootScope.App_Actions = r.actions;
-        $rootScope.App_Title = "Edunode";
-        console.log(r.actions);
-      }
-    });
-    $rootScope.actualSection = function(theSection) {
-
-    }
-}
-RunCtrl.$injects = ['http', '$rootScope'];
 
 function HomeCtrl ($scope, $rootScope, $http) {
  // $http.get("$App::HomeActions").success(function(r) {
@@ -30,7 +17,7 @@ function CoursesCtrl($scope) {
 
 function CommunitiesCtrl($scope, $http) {
   $scope.Title = "Comunidades"; 
-  $scope.Kind = "Communities";
+  $scope.Kind  = "Communities";
 }
 
 function KtalogKtrl($scope, $http) {

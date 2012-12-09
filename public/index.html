@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" ng-app="EduCom" ng-controller="RunCtrl">
+<html lang="es" ng-app="EduCom">
 <head>
   <title> « EduComún » </title>
   <link rel="stylesheet/less" type="text/less" href="bootstrap/less/bootstrap.less"/>
@@ -9,7 +9,7 @@
 <body id="EduNode">
   <div id="EduCom">
     <div ng-include="'partials/navbar.html'"></div>
-    <div ng-view></div>
+    <div ng-view class="container-fluid"></div>
   </div><!--MainNode-->
   <script type="text/javascript" src="js/less.js"></script>
   <script type="text/javascript" src="js/mootools-core-1.4.5-full-nocompat-yc.js"></script>
@@ -19,6 +19,7 @@
 -->
   <script type="text/javascript" src="js/angular.min.js"></script>
   <script type="text/javascript" src="js/ng/controllers.js"></script>
+  <script type="text/javascript" src="js/ng/ttn.js"></script>
   <script type="text/javascript" src="js/ng/app.js"></script>
  
 </body>

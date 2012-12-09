@@ -21,6 +21,7 @@ app.configure('development', function() {
   app.get (/^\/--([A-Z][a-z]+)?([A-Z][a-z]+):([\w_]+)?$/, Operator.byJugglerSyntax);
   app.post(/^\/--([A-Z][a-z]+)?([A-Z][a-z]+):([\w_]+)?$/, Operator.byJugglerSyntax);
 
+
 /*REST API*/
   //app.get   (/\/api\/(\w+)\/(\w+)?$/, Operator.byRESTSyntax);
   /*
