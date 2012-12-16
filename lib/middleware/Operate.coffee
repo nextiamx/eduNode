@@ -6,16 +6,15 @@ Operate = (params, req, res) ->
   if operator 
     operation = operator.operation(params.operation)
     if operation
-      operation params, (response)->
-        res.send response
+      operation params, (response)-> res.send response
+    else 
+      res.send "NooooOp"
   else 
     res.send "NoOp"
 
-Operate.set = (anAlias, anOperate)->
-	$sets[anAlias] = anOperate
+Operate.set = (anAlias, anOperate)-> $sets[anAlias] = anOperate
 
-Operate.get = (anAlias) ->
-	$sets[anAlias]
+Operate.get = (anAlias) -> $sets[anAlias]
 
 #REST 
 Operate.byRESTSyntax = (req, res) ->
@@ -42,20 +41,18 @@ jugglerParams = (req) ->
     'rId'       : rid
     'query'     : req.query
     'body'      : req.body
+  console.log(params)
+  params
 
-
+#Juggler Syntax Processor
 Operate.byJugglerSyntax = (req, res) ->
   params = jugglerParams req
-  if(!(
-    ( 
-      (req.method is "GET") and
-      (['Query','Get'].indexOf(params.operation) > -1) 
-    ) or ( 
-      (req.method is "POST") and
-      (['Update','Delete','Create'].indexOf(params.operation) > -1)
-    )
-  ))
-    params.operation = false
+  allowed = 
+    GET : ['Query', 'Get']
+    POST: ['Edit', 'Delete', 'Create']
+
+  #if allowed[req.method].indexOf(params.operation) is -1
+  #  params.operation = off
   
   Operate params, req, res
 

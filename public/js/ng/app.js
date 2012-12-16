@@ -45,6 +45,12 @@ config(["$routeProvider", function($routeProvider) {
 
   $rootScope.actualSection = function(theSection) {
   }
-  
+
+  alert(0);
+
+  $http.post('/--Edit:Communities_50c4486e021058c21f000001', {nombre : "nombre Editado"})
+    .success(function(e) {
+      console.log(e);
+    })
 });
 

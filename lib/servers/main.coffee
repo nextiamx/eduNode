@@ -6,7 +6,6 @@ actions.Server = (params, callback) ->
 actions.Version = actions.Server
 
 mainServer = {}
-mainServer.action = (anAction) ->
-  actions[anAction];
+mainServer.action = (anAction) -> actions[anAction]
 
 module.exports = mainServer;
