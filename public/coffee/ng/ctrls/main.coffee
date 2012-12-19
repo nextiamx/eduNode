@@ -28,18 +28,21 @@ angular.module("educomControllers",[])
 #Controladores Accion+ aModel + "_" + anIdes
 .controller("CoursesCtrl", ($scope, $rootScope) -> 
   $scope.model = "Courses"
+  $scope.singleTemplate = "/partials/courses/single.html"
   $rootScope.actualSection = "cursos"
   $scope.subjectCol = "course"
 )
 
 .controller("ProjectsCtrl", ($scope, $rootScope) -> 
-  $scope.model = "Courses"
+  $scope.model = "Projects"
+  $scope.singleTemplate = "/partials/projects/single.html"
   $rootScope.actualSection = "proyectos"
   $scope.subjectCol = "project"
  
 )
 .controller("CommunitiesCtrl", ($scope, $rootScope) -> 
   $scope.model = "Communities"
+  $scope.singleTemplate = "/partials/communities/single.html"
   $rootScope.actualSection = "comunidades"
   $scope.subjectCol = "community"
   
@@ -51,6 +54,10 @@ angular.module("educomControllers",[])
 .controller('genericListCtrl', ($scope, apiModel) ->
   #fetch items from server
   apiModel($scope.model).query().success (r) -> $scope.Items = r
+  $scope.setView = (aView) ->
+    $scope.view = aView;
+    $scope.template = "/partials/generic/" + aView + ".html" 
+  
 )
 #GenericSingleCtrl
 .controller('genericSingleCtrl', ($scope, apiModel) -> 

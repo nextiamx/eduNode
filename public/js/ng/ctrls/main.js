@@ -31,22 +31,29 @@
     return $rootScope.actualSection = "home";
   }).controller("CoursesCtrl", function($scope, $rootScope) {
     $scope.model = "Courses";
+    $scope.singleTemplate = "/partials/courses/single.html";
     $rootScope.actualSection = "cursos";
     return $scope.subjectCol = "course";
   }).controller("ProjectsCtrl", function($scope, $rootScope) {
-    $scope.model = "Courses";
+    $scope.model = "Projects";
+    $scope.singleTemplate = "/partials/projects/single.html";
     $rootScope.actualSection = "proyectos";
     return $scope.subjectCol = "project";
   }).controller("CommunitiesCtrl", function($scope, $rootScope) {
     $scope.model = "Communities";
+    $scope.singleTemplate = "/partials/communities/single.html";
     $rootScope.actualSection = "comunidades";
     return $scope.subjectCol = "community";
   }).controller("InfoCtrl", function($scope, $rootScope) {
     return $rootScope.actualSection = "info";
   }).controller('genericListCtrl', function($scope, apiModel) {
-    return apiModel($scope.model).query().success(function(r) {
+    apiModel($scope.model).query().success(function(r) {
       return $scope.Items = r;
     });
+    return $scope.setView = function(aView) {
+      $scope.view = aView;
+      return $scope.template = "/partials/generic/" + aView + ".html";
+    };
   }).controller('genericSingleCtrl', function($scope, apiModel) {});
 
 }).call(this);

@@ -1,5 +1,13 @@
 <div ng-controller="genericListCtrl">
-	<div ng-repeat="item in Items">
-		{{item[subjectCol]}}
-	</div>
+		<div class="btn-group" >
+			<button class="btn" ng-click="setView('tradicional')"ng-class="view=='tradicional'&&'active'">
+				vista tradicional
+			</button>
+	  		<button class="btn" ng-click="setView('grafica')" ng-class="view=='grafica'&&'active'">
+	  			grafica
+	  		</button>
+	  	</div>
+<div ng-include="template"></div>
+
+	<div ng-repeat="item in Items" ng-include="singleTemplate"></div>
 </div>
