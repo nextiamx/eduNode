@@ -37,7 +37,7 @@ angular.module('educom', ['educomControllers'])
 
   .when("/info/", 
       templateUrl:"/partials/utils/info.html"
-      controller: "infoCtrl"
+      controller: "InfoCtrl"
   )
 
   .otherwise(redirectTo: "/home/")
@@ -48,8 +48,9 @@ angular.module('educom', ['educomControllers'])
 
   $http.get("$App:Info").success (r) ->
     if(r.logged) 
-      $rootScope.App_Actions = r.actions;
-      $rootScope.App_Title = "Edunode";
+      r.actions[0].action = "home"
+      $rootScope.App_Actions = r.actions
+      $rootScope.App_Title = "Edunode"
     console.log(r)
   
  

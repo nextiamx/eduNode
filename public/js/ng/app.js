@@ -16,13 +16,14 @@
       controller: "ProjectsCtrl"
     }).when("/info/", {
       templateUrl: "/partials/utils/info.html",
-      controller: "infoCtrl"
+      controller: "InfoCtrl"
     }).otherwise({
       redirectTo: "/home/"
     });
   }).run(function($rootScope, $http) {
     $http.get("$App:Info").success(function(r) {
       if (r.logged) {
+        r.actions[0].action = "home";
         $rootScope.App_Actions = r.actions;
         $rootScope.App_Title = "Edunode";
       }

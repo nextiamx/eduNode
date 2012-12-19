@@ -10,7 +10,7 @@
       </a>
  
       <!-- Be sure to leave the brand out there if you want it shown -->
-      <a class="brand" href="#">{{App_Title}} &mdash; {{actualSection}}</a>
+      <a class="brand" href="#">{{App_Title}}</a>
       
  
       <!-- Everything you want hidden at 940px or less, place within here -->
@@ -20,7 +20,7 @@
           <li ng-repeat="action in App_Actions" ng-class="actualSection == action.action && 'active' ">
             <a href="#/{{action.action}}" >
               <i class="icon" ng-class="action.icon"></i>
-              {{action.caption}} {{action.action}}
+              {{action.caption}}
             </a>
           </li>
         </ul>
