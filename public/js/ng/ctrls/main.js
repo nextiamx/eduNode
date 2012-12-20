@@ -27,8 +27,22 @@
       }
       return models[aModel];
     };
-  }).controller('homeCtrl', function($scope, $rootScope) {
-    return $rootScope.actualSection = "home";
+  }).controller('InicioCtrl', function($scope, $rootScope) {
+    return $rootScope.actualSection = "inicio";
+  }).controller('leftBarCtrl', function($scope) {
+    $scope.vinculacion = [];
+    $scope.vinculacion.push({
+      name: "Comunidades",
+      icon: "icon-group"
+    });
+    $scope.vinculacion.push({
+      name: "Proyectos",
+      icon: "icon-road"
+    });
+    return $scope.vinculacion.push({
+      name: "Cursos",
+      icon: "icon-book"
+    });
   }).controller("CoursesCtrl", function($scope, $rootScope) {
     $scope.model = "Courses";
     $scope.singleTemplate = "/partials/courses/single.html";

@@ -1,12 +1,33 @@
 <div class="row-fluid">
-  <div class="span2">
-    <ul class="nav nav-pills nav-stacked">
-      <li ng-repeat="ha in home_actions">
-        <a href="#/{{}}">{{ha.name}}</a>
-      </li>
-    </ul>
-  </div>
-  <div class="span10">
 
-  </div> 
+<div class="span2" style="background:#DDD">
+
+<div class="input-append">
+  <input class="span10" type="text" placeholder="Buscar...">
+  <button class="btn" type="button">&raquo;</button>
+</div>
+
+<ul class="nav nav-list" ng-controller="leftBarCtrl">
+
+	<li class="active"><a href="#"><i class="icon-eye-open"></i>Vistazo Rápido</a></li>
+  
+  	<li class="nav-header"><i class="icon-cloud"></i>Vínculación</li>
+  	<li  ng-repeat="item in vinculacion">
+  		<a href="#"><i ng-class="item.icon"></i>{{item.name}}</a>
+  	</li>
+
+  	<li class="nav-header"><i class=" icon-tasks"></i>Actividades</li>
+  	<li  ng-repeat="x in ['uno', 'otro', 'otro más' , 'el ultimo']"><a href="#">{{x}}</a></li>
+
+  	<li class="nav-header"><i class="icon-calendar"></i>Eventos</li>
+  	<li  ng-repeat="x in ['uno', 'otro', 'otro más' , 'el ultimo']"><a href="#">{{x}}</a></li>
+
+  	<li class="nav-header"><i class="icon-comments-alt"></i>Discusiones</li>
+  	<li  ng-repeat="x in ['uno', 'otro', 'otro más' , 'el ultimo']"><a href="#">{{x}}</a></li>
+ 
+
+ 
+</ul>
+</div>
+
 </div>

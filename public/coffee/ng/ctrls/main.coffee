@@ -21,9 +21,36 @@ angular.module("educomControllers",[])
     models[aModel]  
 )
 
-.controller('homeCtrl', ($scope, $rootScope) -> 
-  $rootScope.actualSection = "home"
+.controller('InicioCtrl', ($scope, $rootScope) -> 
+  $rootScope.actualSection = "inicio"
 )
+.controller('leftBarCtrl', ($scope) ->
+  $scope.vinculacion = []
+  $scope.vinculacion.push (name:"Comunidades", icon:"icon-group")
+  $scope.vinculacion.push (name:"Proyectos", icon:"icon-road")
+  $scope.vinculacion.push (name:"Cursos", icon:"icon-book")
+
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #Controladores Accion+ aModel + "_" + anIdes
 .controller("CoursesCtrl", ($scope, $rootScope) -> 

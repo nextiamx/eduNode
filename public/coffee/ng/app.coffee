@@ -2,9 +2,9 @@ angular.module('educom', ['educomControllers'])
 .config( ($routeProvider) -> 
   $routeProvider
   
-  .when("/home/", 
+  .when("/inicio/", 
     templateUrl : '/partials/home.html'
-    controller  : 'homeCtrl'
+    controller  : 'InicioCtrl'
   )
 
 
@@ -40,29 +40,25 @@ angular.module('educom', ['educomControllers'])
       controller: "InfoCtrl"
   )
 
-  .otherwise(redirectTo: "/home/")
+  .otherwise(redirectTo: "/inicio/")
 
 )
 
 .run ($rootScope, $http) ->
 
-  $http.get("$App:Info").success (r) ->
-    if(r.logged) 
-      r.actions[0].action = "home"
-      $rootScope.App_Actions = r.actions
-      $rootScope.App_Title = "Edunode"
-    console.log(r)
+  #$http.get("$App:Info").success (r) ->
+  #  if(r.logged) 
+  #    r.actions[0].action = "home"
+  #    $rootScope.App_Actions = r.actions
+  #    $rootScope.App_Title = "Edunode"
+  #  console.log(r)
   
- 
+  #$http.post('/--Edit:Communities_50c4486e021058c21f000001', {nombre : "nombre Editado"})
+  #.success (e) -> console.log(e)
 
-  $http.post('/--Edit:Communities_50c4486e021058c21f000001', {nombre : "nombre Editado"})
-  .success (e) -> console.log(e)
+  actions = []
+  actions.push(action : "inicio", caption : "Inicio")
+  actions.push(action : "info", caption : "Informacion")
+  
 
-
-.filter("filtro", () ->
-  (input) ->
-    input + " filtrado!"
-)
-.controller('exampleCtrl', ($scope) -> 
-  $scope.alfa = "hola";
-)
+  $rootScope.App_Actions = actions;

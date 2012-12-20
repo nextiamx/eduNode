@@ -2,9 +2,9 @@
 (function() {
 
   angular.module('educom', ['educomControllers']).config(function($routeProvider) {
-    return $routeProvider.when("/home/", {
+    return $routeProvider.when("/inicio/", {
       templateUrl: '/partials/home.html',
-      controller: 'homeCtrl'
+      controller: 'InicioCtrl'
     }).when("/comunidades/", {
       templateUrl: "/partials/generic/list.html",
       controller: "CommunitiesCtrl"
@@ -18,28 +18,20 @@
       templateUrl: "/partials/utils/info.html",
       controller: "InfoCtrl"
     }).otherwise({
-      redirectTo: "/home/"
+      redirectTo: "/inicio/"
     });
   }).run(function($rootScope, $http) {
-    $http.get("$App:Info").success(function(r) {
-      if (r.logged) {
-        r.actions[0].action = "home";
-        $rootScope.App_Actions = r.actions;
-        $rootScope.App_Title = "Edunode";
-      }
-      return console.log(r);
+    var actions;
+    actions = [];
+    actions.push({
+      action: "inicio",
+      caption: "Inicio"
     });
-    return $http.post('/--Edit:Communities_50c4486e021058c21f000001', {
-      nombre: "nombre Editado"
-    }).success(function(e) {
-      return console.log(e);
+    actions.push({
+      action: "info",
+      caption: "Informacion"
     });
-  }).filter("filtro", function() {
-    return function(input) {
-      return input + " filtrado!";
-    };
-  }).controller('exampleCtrl', function($scope) {
-    return $scope.alfa = "hola";
+    return $rootScope.App_Actions = actions;
   });
 
 }).call(this);

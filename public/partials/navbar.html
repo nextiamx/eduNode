@@ -18,8 +18,9 @@
         <!-- .nav, .navbar-search, .navbar-form, etc -->
         <ul class="nav">
           <li ng-repeat="action in App_Actions" ng-class="actualSection == action.action && 'active' ">
+            
             <a href="#/{{action.action}}" >
-              <i class="icon" ng-class="action.icon"></i>
+              <i ng-class="action.icon"></i>
               {{action.caption}}
             </a>
           </li>
