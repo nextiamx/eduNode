@@ -1,0 +1,11 @@
+
+
+<div ng-hide="clicked" ng-click="clicked = true">
+	<strong>
+		<a href="#" ng-href="#/{{modelName}}/{{item._id}}">{{item[subjectCol]}}</a>
+	</strong> &mdash; 
+	<span class="muted"> {{item.description}}</span>
+</div>
+<div ng-show="clicked" ng-click="clicked = false">
+	Clicked
+</div>

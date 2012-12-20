@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="educom">
+<head>
+  <title> « EduNode » </title>
+  <link rel="stylesheet/less" type="text/less" href="less/mainstyle.less"/>
+</head>
+<body >
+  <div id="EduCom">
+    <!--<div ng-include="'partials/navbar.html'"></div>-->
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span2" ng-include="'/partials/sidebar.html'"></div>
+        <div class="span10" ng-view></div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/less.js"></script>
+  <script type="text/javascript" src="js/mootools-core-1.4.5-full-nocompat-yc.js"></script>
+  <script type="text/javascript" src="js/mootools-more-1.4.0.1.js"></script>
+  <script type="text/javascript" src="js/angular.min.js"></script>
+  <script type="text/javascript" src="js/ng/ctrls/main.js"></script>
+  <script type="text/javascript" src="js/ng/ttn.js"></script>
+  <script type="text/javascript" src="js/ng/app.js"></script>
+</body>
+</html>
