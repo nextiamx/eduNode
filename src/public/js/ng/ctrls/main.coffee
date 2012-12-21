@@ -21,7 +21,7 @@ angular.module("educomControllers",[])
     models[aModel]  
 )
 
-.controller('ACtrl', ($scope, $rootScope) -> 
+.controller('HomeCtrl', ($scope, $rootScope) -> 
   $rootScope.actualSection = "inicio"
 )
 .controller('leftBarCtrl', ($scope) ->
@@ -64,6 +64,33 @@ angular.module("educomControllers",[])
   $scope.subjectCol = "community"
   
 )
+
+.controller("EventsCtrl", ($scope, $rootScope) -> 
+  $scope.model = "Events"
+  $scope.modelName = "eventos"
+  $scope.singleTemplate = "/partials/communities/single.html"
+  $rootScope.actualSection = "eventos"
+  $scope.subjectCol = "Event"
+  
+)
+
+.controller("ActivitiesCtrl", ($scope, $rootScope) -> 
+  $scope.model = "Activities"
+  $scope.modelName = "actividades"
+  $scope.singleTemplate = "/partials/communities/single.html"
+  $rootScope.actualSection = "actividades"
+  $scope.subjectCol = "Activities"
+  
+)
+
+.controller("DiscussionsCtrl", ($scope, $rootScope) -> 
+  $scope.model = "Discussions"
+  $scope.modelName = "discusion"
+  $scope.singleTemplate = "/partials/communities/single.html"
+  $rootScope.actualSection = "discusiones"
+  $scope.subjectCol = "Discussion"
+  
+)
 .controller("InfoCtrl", ($scope, $rootScope) -> 
   $rootScope.actualSection = "info"
 )
@@ -77,8 +104,12 @@ angular.module("educomControllers",[])
   
 )
 #GenericSingleCtrl
-.controller('genericSingleCtrl', ($scope, apiModel) -> 
-  
+.controller('genericSingleCtrl', ($scope, apiModel,  $routeParams) -> 
+ 
+
+  apiModel($scope.model).get($routeParams._id).success (r) -> 
+    console.log(r)
+    $scope.item = r
 )
 
 
