@@ -23,11 +23,10 @@ collections =
   #'Users'        : require("../data/users"),
   #  
   ##'Comments'     : require("../data/comments"),
-  'Communities'  : require "../data/communities" 
-  'Courses'      : require("../data/courses"),
-  'Projects'     : require("../data/projects"),
-  'Subjects'     : require "../data/subjects" 
-
+  'Communities'  : require ("../data/communities") 
+  'Courses'      : require ("../data/courses")
+  'Projects'     : require ("../data/projects")
+  'Subjects'     : require ("../data/subjects") 
   #'Discussions'  : require("../data/discussions"),
   #'Activities'   : require("../data/activities"),
   #'Events'       : require("../data/events")

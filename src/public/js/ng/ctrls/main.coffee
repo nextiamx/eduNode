@@ -21,7 +21,7 @@ angular.module("educomControllers",[])
     models[aModel]  
 )
 
-.controller('InicioCtrl', ($scope, $rootScope) -> 
+.controller('ACtrl', ($scope, $rootScope) -> 
   $rootScope.actualSection = "inicio"
 )
 .controller('leftBarCtrl', ($scope) ->
@@ -31,19 +31,6 @@ angular.module("educomControllers",[])
   $scope.vinculacion.push (name:"Cursos", icon:"icon-book", action:"cursos")
 
 )
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

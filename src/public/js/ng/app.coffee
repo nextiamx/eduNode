@@ -2,9 +2,9 @@ angular.module('educom', ['educomControllers'])
 .config( ($routeProvider) -> 
   $routeProvider
   
-  .when("/inicio/", 
+  .when("/", 
     templateUrl : '/partials/home.html'
-    controller  : 'InicioCtrl'
+    controller  : 'ACtrl'
   )
 
   .when("/comunidades/", 
@@ -39,8 +39,7 @@ angular.module('educom', ['educomControllers'])
       controller: "InfoCtrl"
   )
 
-  .otherwise(redirectTo: "/inicio/")
-
+  .otherwise(redirectTo: "/")
 )
 
 .run ($rootScope, $http) ->
